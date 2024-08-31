@@ -3,7 +3,6 @@ const { submitUserDetail } = require("../controllers/userController");
 
 const router = express.Router();
 
+router.post("/userDetails", submitUserDetail);
 
-router.post("/userDetails", submitUserDetail)
-
-module.exports = router ;
+module.exports = router;

@@ -1,11 +1,11 @@
-// controllers/authController.js
+
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../model/userSchema");
 const { response } = require("express");
 require("dotenv").config();
 
-// Register a new user
+
 exports.register = async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -33,7 +33,7 @@ exports.register = async (req, res) => {
   }
 };
 
-// Login a user
+
 exports.login = async (req, res) => {
   const { email, password } = req.body;
 
