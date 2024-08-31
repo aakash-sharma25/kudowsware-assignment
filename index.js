@@ -17,7 +17,7 @@ const dbConnect = async () => {
   }
 };
 
-await dbConnect();
+dbConnect();
 
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
