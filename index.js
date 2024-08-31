@@ -5,15 +5,12 @@ const userRoutes = require("./router/userRoutes");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
-// Connect to database
-await connectDb();
 
 const app = express();
-
-// Middleware
 app.use(express.json());
 
-// Routes
+connectDb();
+
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 
